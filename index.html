@@ -37,8 +37,8 @@
 body {
   position: relative;
   background: url('ginhawise.png') no-repeat center center / cover;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh; /* use min-height instead of fixed height */
+  overflow-y: auto;   /* allow vertical scrolling */
 }
 
 .fire-overlay {
@@ -54,20 +54,19 @@ body {
 }
 
 .content {
-  position: relative;
-  z-index: 2; /* keeps it above the fire */
-      max-width: 900px;
-      animation: fadeIn 1.2s ease-in-out;
-  max-height: 100vh;
-  overflow: auto;
+ position: relative;
+  z-index: 2;
+  max-width: 900px;
+  animation: fadeIn 1.2s ease-in-out;
   padding-top: 2vh;
   padding-bottom: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Remove these lines: */
+  /* max-height: 100vh; */
+  /* overflow: auto; */
 }
-
-    }
 
 
 
