@@ -56,12 +56,17 @@ body {
 .content {
   position: relative;
   z-index: 2; /* keeps it above the fire */
-}
-
-
-    .content {
       max-width: 900px;
       animation: fadeIn 1.2s ease-in-out;
+  max-height: 100vh;
+  overflow: auto;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
     }
 
 
@@ -78,6 +83,8 @@ body {
   border-radius: 0; /* square */
   background: none; /* remove white */
   padding: 0; /* remove padding */
+    max-height: 150px;
+  object-fit: contain;
 }
 
 
