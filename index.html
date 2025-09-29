@@ -35,10 +35,14 @@
       color: #fff;
     }
 body {
-  position: relative;
+  min-height: 100vh; /* allow page to grow */
+  font-family: 'Inter', sans-serif;
   background: url('ginhawise.png') no-repeat center center / cover;
-  min-height: 100vh; /* use min-height instead of fixed height */
-  overflow-y: auto;   /* allow vertical scrolling */
+  display: block; /* <-- change from flex */
+  padding: 8%;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden; /* prevent sideways scroll */
 }
 
 .fire-overlay {
@@ -54,18 +58,11 @@ body {
 }
 
 .content {
- position: relative;
+  position: relative;
   z-index: 2;
   max-width: 900px;
   animation: fadeIn 1.2s ease-in-out;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Remove these lines: */
-  /* max-height: 100vh; */
-  /* overflow: auto; */
+  padding: 2vh 0;
 }
 
 
